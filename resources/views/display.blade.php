@@ -13,7 +13,7 @@
 <body>
      <!-- Booking Summary -->
       <div class="m-5">
-    <a href="{{ route('booking.dashboard') }}" class="btn btn-secondary mb-3">← Back to Dashboard</a>
+    <a href="{{ route('dashboard') }}" class="btn btn-secondary mb-3">← Back to Dashboard</a>
         </div>
                 <div class="card m-5">
                     <table class="table  table-striped">

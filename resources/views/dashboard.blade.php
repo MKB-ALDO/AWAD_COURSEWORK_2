@@ -157,12 +157,12 @@
 
   <!-- Sidebar -->
   <div class="sidebar">
-    <h2><i class="bi bi-house-door"></i> Airbnb Admin</h2>
+    <h2><i class="bi bi-house-door"></i>KampalaStays Admin</h2>
     <a href="{{ url('/index') }}"><i class="bi bi-house"></i> Home</a>
     <a href="{{ route('booking.show') }}"><i class="bi bi-plus-circle"></i> New Booking</a>
     <a href="{{ route('booking.display') }}"><i class="bi bi-table"></i> Display Bookings</a>
-    <a href="#"><i class="bi bi-bar-chart"></i> Reports</a>
-    <a href="#"><i class="bi bi-gear"></i> Settings</a>
+    <!-- <a href="#"><i class="bi bi-bar-chart"></i> Reports</a>
+    <a href="#"><i class="bi bi-gear"></i> Settings</a> -->
     <a href="{{ route('logout') }}"><i class="bi bi-box-arrow-right"></i> Logout</a>
   </div>
 

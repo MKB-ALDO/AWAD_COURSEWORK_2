@@ -1,359 +1,320 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Airbnb</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - Kampala Stays</title>
 
-        .navbar {
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        }
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #FF385C;
-        }
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" />
 
-        .hero-about {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 100px 0;
-            text-align: center;
-        }
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-        .hero-about h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      line-height: 1.6;
+      color: #222;
+    }
 
-        .hero-about p {
-            font-size: 1.3rem;
-            opacity: 0.95;
-        }
+    header {
+      background: #fff;
+      padding: 20px 40px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
 
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-            text-align: center;
-        }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #FF385C;
+    }
 
-        .section-subtitle {
-            font-size: 1.1rem;
-            color: #666;
-            text-align: center;
-            margin-bottom: 50px;
-        }
-         header {
-            background: #fff;
-            padding: 20px 40px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-         nav a {
-            margin-left: 30px;
-            text-decoration: none;
-            color: #222;
-            font-weight: 500;
-        }
+    nav a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: #222;
+      font-weight: 500;
+    }
 
+    nav a.active {
+      color: #FF385C;
+    }
 
-        .package-card {
-            border: none;
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-            height: 100%;
-        }
+    .hero {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 80px 40px;
+      text-align: center;
+    }
 
-        .package-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-        }
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
 
-        .package-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 30px;
-            border-radius: 16px 16px 0 0;
-            text-align: center;
-        }
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 40px;
+      opacity: 0.9;
+    }
 
-        .package-header.premium {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-        }
+    .intro {
+      padding: 80px 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
 
-        .package-header.luxury {
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-        }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-top: 40px;
+    }
 
-        .package-title {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
+    .feature {
+      text-align: center;
+      padding: 30px;
+    }
 
-        .package-price {
-            font-size: 2.5rem;
-            font-weight: 700;
-        }
+    .feature-icon {
+      font-size: 48px;
+      margin-bottom: 20px;
+      color: #FF385C;
+    }
 
-        .package-price small {
-            font-size: 1rem;
-            font-weight: 400;
-        }
+    .story-section {
+      padding: 80px 40px;
+      background: #f9f9f9;
+    }
 
-        .package-body {
-            padding: 40px 30px;
-        }
+    .story-content {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
-        .amenity-item {
-            padding: 12px 0;
-            border-bottom: 1px solid #f0f0f0;
-            display: flex;
-            align-items: center;
-        }
+    .story-image {
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
 
-        .amenity-item:last-child {
-            border-bottom: none;
-        }
+    .story-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
 
-        .amenity-icon {
-            color: #667eea;
-            margin-right: 12px;
-            font-size: 1.2rem;
-        }
+    .values-section {
+      padding: 80px 40px;
+      text-align: center;
+    }
 
-        .book-btn {
-            background: #FF385C;
-            color: white;
-            border: none;
-            padding: 15px 40px;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            transition: all 0.3s;
-            text-decoration: none;
-            display: inline-block;
-        }
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      margin-top: 40px;
+    }
 
-        .book-btn:hover {
-            background: #E31C5F;
-            transform: scale(1.05);
-            color: white;
-        }
+    .value-card {
+      background: white;
+      border-radius: 10px;
+      padding: 40px 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+    }
 
-        .cta-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 80px 0;
-            text-align: center;
-            margin-top: 80px;
-        }
+    .value-card:hover {
+      transform: translateY(-5px);
+    }
 
-        .cta-section h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
+    .value-icon {
+      font-size: 40px;
+      margin-bottom: 20px;
+      color: #FF385C;
+    }
 
-        .cta-section p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            opacity: 0.95;
-        }
+    .team-section {
+      padding: 80px 40px;
+      background: #f9f9f9;
+      text-align: center;
+    }
 
-        footer {
-            background: #f7f7f7;
-            padding: 40px 0;
-            margin-top: 0;
-        }
-    </style>
+    .team-member {
+      margin-bottom: 40px;
+    }
+
+    .team-member img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border: 4px solid white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .contact-section {
+      padding: 80px 40px;
+      text-align: center;
+    }
+
+    .contact-info {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .contact-item {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .contact-icon {
+      font-size: 24px;
+      margin-right: 15px;
+      color: #FF385C;
+    }
+
+    footer {
+      background: #f7f7f7;
+      padding: 40px;
+      text-align: center;
+      color: #666;
+    }
+  </style>
 </head>
 <body>
-   <header>
-        <div class="logo">airbnb</div>
-        <nav>
-            
-            <a href="index">Home</a>
-             <a href="about">About</a> 
-             <a href="book">Make Booking</a>
-        </nav>
-    </header>
-    <section class="hero-about">
-        <div class="container">
-            <h1>Discover Your Perfect Stay</h1>
-            <p>Choose from our carefully curated packages designed for every type of traveler</p>
+  <header class="d-flex justify-content-between align-items-center">
+    <div class="logo">Kampala Stays</div>
+    <nav class="d-flex">
+      <a href="index">Home</a>
+      <a href="about" class="active">About</a>
+      <a href="book">Make Booking</a>
+      <a href="login">Login</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Our Story</h1>
+    <p>Discover the passion behind Kampala's most trusted hospitality service</p>
+  </section>
+
+  <section class="intro">
+    <h2>Welcome to Kampala Stays</h2>
+    <p>We're more than just a booking platform - we're your personal connection to authentic Kampala living. Founded with a vision to provide travelers with comfortable, secure, and memorable stays, we've grown from a single property to a curated collection of homes across the city.</p>
+  </section>
+
+  <section class="story-section">
+    <div class="story-content">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <div class="story-image">
+            <img src="images/kampala-host.jpg" alt="Our Founder">
+          </div>
         </div>
-    </section>
-
-    <section class="py-5">
-        <div class="container">
-            <h2 class="section-title mt-5">Our Packages</h2>
-            <p class="section-subtitle">Select the package that best fits your travel style and budget. Each package includes unique amenities and services.</p>
-
-            <div class="row g-4">
-                <!-- Basic Package -->
-                <div class="col-md-4">
-                    <div class="card package-card">
-                        <div class="package-header">
-                            <div class="package-title">Single Room</div>
-                            <div class="package-price">$20<small>/hour</small></div>
-                        </div>
-                        <div class="package-body">
-                            <h5 class="mb-4">Perfect for Budget Travelers</h5>
-                            <div class="amenity-item">
-                                <span class="amenity-icon">✓</span>
-                                <span>Comfortable private room</span>
-                            </div>
-                            <div class="amenity-item">
-                                <span class="amenity-icon">✓</span>
-                                <span>Free Wi-Fi access</span>
-                            </div>
-                            <div class="amenity-item">
-                                <span class="amenity-icon">✓</span>
-                                <span>Shared kitchen facilities</span>
-                            </div>
-                            <div class="amenity-item">
-                                <span class="amenity-icon">✓</span>
-                                <span>24/7 customer support</span>
-                            </div>
-                            <div class="amenity-item">
-                                <span class="amenity-icon">✓</span>
-                                <span>Self check-in option</span>
-                            </div>
-                            <div class="amenity-item">
-                                <span class="amenity-icon">✓</span>
-                                <span>Clean linens & towels</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Premium Package -->
-                <div class="col-md-4">
-                    <div class="card package-card">
-                        <div class="package-header premium">
-                             <div class="package-title">Doubl Room</div>
-                            <div class="package-price">$30<small>/hour</small></div>
-                        </div>
-                        <div class="package-body">
-                            <h5 class="mb-4">Enhanced Comfort & Convenience</h5>
-                            <div class="amenity-item">
-                                <span class="amenity-icon">✓</span>
-                                <span>Entire apartment or home</span>
-                            </div>
-                            <div class="amenity-item">
-                                <span class="amenity-icon">✓</span>
-                                <span>High-speed Wi-Fi</span>
-                            </div>
-                            <div class="amenity-item">
-                                <span class="amenity-icon">✓</span>
-                                <span>Fully equipped kitchen</span>
-                            </div>
-                            <div class="amenity-item">
-                                <span class="amenity-icon">✓</span>
-                                <span>Smart TV with streaming</span>
-                            </div>
-                            <div class="amenity-item">
-                                <span class="amenity-icon">✓</span>
-                                <span>Workspace with desk</span>
-                            </div>
-                            <div class="amenity-item">
-                                <span class="amenity-icon">✓</span>
-                                <span>Free parking space</span>
-                            </div>
-                            <div class="amenity-item">
-                                <span class="amenity-icon">✓</span>
-                                <span>Weekly housekeeping</span>
-                            </div>
-                            <div class="amenity-item">
-                                <span class="amenity-icon">✓</span>
-                                <span>Welcome gift basket</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Luxury Package -->
-                <div class="col-md-4">
-                    <div class="card package-card">
-                        <div class="package-header luxury">
-                             <div class="package-title">Execuitive Room</div>
-                            <div class="package-price">$50<small>/hour</small></div>
-                        </div>
-                        <div class="package-body">
-                            <h5 class="mb-4">Ultimate Premium Experience</h5>
-                            <div class="amenity-item">
-                                <span class="amenity-icon">✓</span>
-                                <span>Luxury villa or penthouse</span>
-                            </div>
-                            <div class="amenity-item">
-                                <span class="amenity-icon">✓</span>
-                                <span>Premium Wi-Fi & tech</span>
-                            </div>
-                            <div class="amenity-item">
-                                <span class="amenity-icon">✓</span>
-                                <span>Gourmet kitchen setup</span>
-                            </div>
-                            <div class="amenity-item">
-                                <span class="amenity-icon">✓</span>
-                                <span>Private pool or hot tub</span>
-                            </div>
-                            <div class="amenity-item">
-                                <span class="amenity-icon">✓</span>
-                                <span>Concierge service</span>
-                            </div>
-                            <div class="amenity-item">
-                                <span class="amenity-icon">✓</span>
-                                <span>Airport pickup & drop-off</span>
-                            </div>
-                            <div class="amenity-item">
-                                <span class="amenity-icon">✓</span>
-                                <span>Daily housekeeping</span>
-                            </div>
-                            <div class="amenity-item">
-                                <span class="amenity-icon">✓</span>
-                                <span>Premium toiletries & amenities</span>
-                            </div>
-                            <div class="amenity-item">
-                                <span class="amenity-icon">✓</span>
-                                <span>Personal chef available</span>
-                            </div>
-                            <div class="amenity-item">
-                                <span class="amenity-icon">✓</span>
-                                <span>Priority 24/7 support</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="col-md-6">
+          <h2>Our Journey</h2>
+          <p>Kampala Stays began in 2018 when our founder noticed a gap in the market for quality short-term rentals that offered both comfort and authentic local experiences. Starting with just one apartment in Kololo, we've carefully expanded to include properties in Bugolobi, Muyenga, Ntinda, and other prime locations.</p>
+          <p>What sets us apart is our hands-on approach. Unlike large rental platforms, we personally manage every property, ensuring consistent quality, cleanliness, and service. Our guests enjoy the benefits of local expertise with the reliability of professional management.</p>
+          <p>Today, we're proud to be Kampala's preferred choice for travelers seeking a home away from home, whether for business, leisure, or extended stays.</p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section class="cta-section">
-        <div class="container">
-            <h2>Ready to Book Your Dream Stay?</h2>
-            <p>Choose your perfect package and start your unforgettable journey today</p>
-            <a href="{{route('booking.show')}}" class="book-btn">Book Now</a>
-        </div>
-    </section>
+  <section class="values-section">
+    <h2>Our Values</h2>
+    <p class="mb-5">These principles guide everything we do at Kampala Stays</p>
 
-    <footer class="text-center">
-        <div class="container">
-            <p class="text-muted mb-0">&copy; 2024 Airbnb. For demonstration purposes only.</p>
-        </div>
-    </footer>
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-icon"><i class="bi bi-house-heart"></i></div>
+        <h3>Authentic Hospitality</h3>
+        <p>We believe in treating every guest like family, providing warm Ugandan hospitality that makes you feel truly at home.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon"><i class="bi bi-shield-check"></i></div>
+        <h3>Trust & Security</h3>
+        <p>Your safety and peace of mind are our top priorities. All our properties are carefully vetted and regularly maintained.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon"><i class="bi bi-stars"></i></div>
+        <h3>Quality Assurance</h3>
+        <p>We maintain high standards across all our properties, from cleanliness to amenities, ensuring a consistently excellent experience.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon"><i class="bi bi-geo-alt"></i></div>
+        <h3>Local Expertise</h3>
+        <p>As locals, we provide insider tips and recommendations to help you experience the best of Kampala.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon"><i class="bi bi-arrow-repeat"></i></div>
+        <h3>Sustainability</h3>
+        <p>We're committed to responsible tourism practices that benefit both our guests and the local community.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon"><i class="bi bi-chat-heart"></i></div>
+        <h3>Personalized Service</h3>
+        <p>We tailor our service to meet your individual needs, ensuring your stay is exactly what you're looking for.</p>
+      </div>
+    </div>
+  </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+  <section class="team-section">
+    <h2>Meet Our Team</h2>
+    <p class="mb-5">The passionate individuals behind Kampala Stays</p>
+
+    <div class="row justify-content-center">
+      <div class="col-md-4 team-member">
+        <img src="images/team-founder.jpg" alt="David Kato - Founder">
+        <h4>David Kato</h4>
+        <p class="text-muted">Founder & Host</p>
+        <p>David started Kampala Stays with a vision to share the best of Ugandan hospitality with travelers from around the world.</p>
+      </div>
+      <div class="col-md-4 team-member">
+        <img src="images/team-manager.jpg" alt="Grace Namuli - Property Manager">
+        <h4>Grace Namuli</h4>
+        <p class="text-muted">Property Manager</p>
+        <p>Grace ensures all our properties are impeccably maintained and our guests have everything they need for a perfect stay.</p>
+      </div>
+      <div class="col-md-4 team-member">
+        <img src="images/team-support.jpg" alt="Michael Ssebunya - Guest Support">
+        <h4>Michael Ssebunya</h4>
+        <p class="text-muted">Guest Support</p>
+        <p>Michael is your go-to person for any questions or assistance during your stay, available 24/7 to help.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-section">
+    <h2>Get In Touch</h2>
+    <p class="mb-5">We'd love to hear from you</p>
+
+    <div class="contact-info">
+      <div class="contact-item">
+        <div class="contact-icon"><i class="bi bi-geo-alt"></i></div>
+        <p>Plot 24, Acacia Avenue, Kololo, Kampala</p>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon"><i class="bi bi-telephone"></i></div>
+        <p>+256 700 123 456</p>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon"><i class="bi bi-envelope"></i></div>
+        <p>hello@kampalastays.com</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Kampala Stays. All rights reserved. Built for local hospitality.</p>
+  </footer>
 </body>
 </html>

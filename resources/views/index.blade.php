@@ -175,7 +175,7 @@
     <div class="row g-4">
       <div class="col-md-4">
         <div class="property-card">
-          <img src="images/kampala-apartment1.jpg" alt="Kololo Apartment">
+          <img src="pics/apt1.jpg" alt="Kololo Apartment">
           <div class="property-card-body">
             <h5>Modern Apartment – Kololo</h5>
             <p>2-bedroom apartment with balcony, Wi-Fi, and secure parking.</p>
@@ -184,7 +184,7 @@
       </div>
       <div class="col-md-4">
         <div class="property-card">
-          <img src="images/kampala-apartment2.jpg" alt="Bugolobi Studio">
+          <img src="pics/studio.jpg" alt="Bugolobi Studio">
           <div class="property-card-body">
             <h5>Studio Retreat – Bugolobi</h5>
             <p>Perfect for solo travelers. Cozy, clean, and close to cafes.</p>
@@ -193,7 +193,7 @@
       </div>
       <div class="col-md-4">
         <div class="property-card">
-          <img src="images/kampala-apartment3.jpg" alt="Muyenga Villa">
+          <img src="pics/villa.jpg" alt="Muyenga Villa">
           <div class="property-card-body">
             <h5>Luxury Villa – Muyenga</h5>
             <p>Spacious 4-bedroom villa with garden, pool, and city views.</p>
