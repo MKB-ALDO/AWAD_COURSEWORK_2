@@ -1,201 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Airbnb - Book Unique Homes</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Bootstrap JS Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kampala Stays – Book Unique Homes</title>
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #222;
-        }
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-        header {
-            background: #fff;
-            padding: 20px 40px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" />
 
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #FF385C;
-        }
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-        nav a {
-            margin-left: 30px;
-            text-decoration: none;
-            color: #222;
-            font-weight: 500;
-        }
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      line-height: 1.6;
+      color: #222;
+    }
 
-        .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 80px 40px;
-            text-align: center;
-        }
+    header {
+      background: #fff;
+      padding: 20px 40px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
 
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #FF385C;
+    }
 
-        .hero p {
-            font-size: 20px;
-            margin-bottom: 40px;
-            opacity: 0.9;
-        }
+    nav a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: #222;
+      font-weight: 500;
+    }
 
-        .search-box {
-            background: white;
-            border-radius: 50px;
-            padding: 10px;
-            max-width: 800px;
-            margin: 0 auto;
-            display: flex;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-        }
+    .hero {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 80px 40px;
+      text-align: center;
+    }
 
-        .search-input {
-            flex: 1;
-            padding: 15px 25px;
-            border: none;
-            outline: none;
-            font-size: 16px;
-        }
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
 
-        .search-btn {
-            background: #FF385C;
-            color: white;
-            border: none;
-            padding: 15px 35px;
-            border-radius: 50px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 40px;
+      opacity: 0.9;
+    }
 
-        .search-btn:hover {
-            background: #E31C5F;
-        }
+    .intro {
+      padding: 80px 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
 
-        .intro {
-            padding: 80px 40px;
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: center;
-        }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-top: 40px;
+    }
 
-        .intro h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
+    .feature {
+      text-align: center;
+      padding: 30px;
+    }
 
-        .intro p {
-            font-size: 18px;
-            color: #555;
-            max-width: 800px;
-            margin: 0 auto 60px;
-        }
+    .feature-icon {
+      font-size: 48px;
+      margin-bottom: 20px;
+      color: #FF385C;
+    }
 
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-top: 40px;
-        }
+    .property-card {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+    }
 
-        .feature {
-            text-align: center;
-            padding: 30px;
-        }
+    .property-card:hover {
+      transform: translateY(-5px);
+    }
 
-        .feature-icon {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
+    .property-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
 
-        .feature h3 {
-            font-size: 22px;
-            margin-bottom: 15px;
-        }
+    .property-card-body {
+      padding: 15px;
+    }
 
-        .feature p {
-            color: #666;
-            font-size: 16px;
-        }
+    .testimonials {
+      background: #f9f9f9;
+      padding: 60px 40px;
+      text-align: center;
+    }
 
-        footer {
-            background: #f7f7f7;
-            padding: 40px;
-            text-align: center;
-            color: #666;
-        }
-    </style>
+    .testimonial {
+      max-width: 600px;
+      margin: 0 auto 30px;
+      font-style: italic;
+      color: #444;
+    }
+
+    footer {
+      background: #f7f7f7;
+      padding: 40px;
+      text-align: center;
+      color: #666;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="logo">airbnb</div>
-        <nav>
-    <a href="index">Home</a>
-    <a href="about">About</a>
-    <a href="book">Make Booking</a>
-    <a href="login"> Login</a>
-</nav>
-    </header>
+  <header class="d-flex justify-content-between align-items-center">
+    <div class="logo">Kampala Stays</div>
+    <nav class="d-flex">
+      <a href="index">Home</a>
+      <a href="about">About</a>
+      <a href="book">Make Booking</a>
+      <a href="login">Login</a>
+    </nav>
+  </header>
 
-    <section class="hero">
-        <h1>Find Your Perfect Stay</h1>
-        <p>Book unique homes, apartments, and rooms from local hosts around the world</p>
-        
-    </section>
+  <section class="hero">
+    <h1>Discover Unique Stays in Kampala</h1>
+    <p>Book cozy apartments, villas, and guesthouses managed by a trusted local host</p>
+  </section>
 
-    <section class="intro">
-        <h2>Welcome to Airbnb</h2>
-        <p>Airbnb is a trusted community marketplace where people can list, discover, and book unique accommodations around the world. Whether you're looking for a cozy apartment in Paris, a beach house in Bali, or a treehouse in California, we connect travelers with hosts who offer authentic local experiences.</p>
+  <section class="intro">
+    <h2>Welcome to Kampala Stays</h2>
+    <p>We offer a curated selection of homes across Kampala, all managed by a single trusted host. Whether you're visiting for business, leisure, or a weekend getaway, our properties provide comfort, convenience, and a true taste of Ugandan hospitality.</p>
 
-        <div class="features">
-            <div class="feature">
-                <div class="feature-icon">🏠</div>
-                <h3>Unique Homes</h3>
-                <p>Stay in handpicked homes with character, from city apartments to countryside villas</p>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">🌍</div>
-                <h3>Worldwide Locations</h3>
-                <p>Over 7 million listings in more than 220 countries and regions</p>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">✨</div>
-                <h3>Trusted Community</h3>
-                <p>Read reviews from verified guests and communicate directly with hosts</p>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">💰</div>
-                <h3>Best Value</h3>
-                <p>Find accommodations that fit your budget with transparent pricing</p>
-            </div>
+    <div class="features">
+      <div class="feature">
+        <div class="feature-icon"><i class="bi bi-house-door"></i></div>
+        <h3>Multiple Locations</h3>
+        <p>Choose from homes in Kololo, Bugolobi, Muyenga, Ntinda, and more</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon"><i class="bi bi-shield-check"></i></div>
+        <h3>Clean & Secure</h3>
+        <p>All properties are professionally cleaned and monitored for your safety</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon"><i class="bi bi-wifi"></i></div>
+        <h3>Modern Amenities</h3>
+        <p>Enjoy Wi-Fi, smart TVs, hot showers, and fully equipped kitchens</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon"><i class="bi bi-calendar-check"></i></div>
+        <h3>Easy Booking</h3>
+        <p>Book directly through our platform with instant confirmation</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container my-5">
+    <h2 class="text-center mb-4">Featured Properties</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="property-card">
+          <img src="images/kampala-apartment1.jpg" alt="Kololo Apartment">
+          <div class="property-card-body">
+            <h5>Modern Apartment – Kololo</h5>
+            <p>2-bedroom apartment with balcony, Wi-Fi, and secure parking.</p>
+          </div>
         </div>
-    </section>
+      </div>
+      <div class="col-md-4">
+        <div class="property-card">
+          <img src="images/kampala-apartment2.jpg" alt="Bugolobi Studio">
+          <div class="property-card-body">
+            <h5>Studio Retreat – Bugolobi</h5>
+            <p>Perfect for solo travelers. Cozy, clean, and close to cafes.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="property-card">
+          <img src="images/kampala-apartment3.jpg" alt="Muyenga Villa">
+          <div class="property-card-body">
+            <h5>Luxury Villa – Muyenga</h5>
+            <p>Spacious 4-bedroom villa with garden, pool, and city views.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-        <p>&copy; 2024 Airbnb Clone. For demonstration purposes only.</p>
-    </footer>
+  <section class="testimonials">
+    <h2>What Our Guests Say</h2>
+    <div class="testimonial">“The Kololo apartment was spotless and peaceful. Booking was easy and the host was amazing!” – Sarah, Nairobi</div>
+    <div class="testimonial">“Loved the location and the amenities. Will definitely stay again when in Kampala.” – James, London</div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Kampala Stays. All rights reserved. Built for local hospitality.</p>
+  </footer>
 </body>
 </html>

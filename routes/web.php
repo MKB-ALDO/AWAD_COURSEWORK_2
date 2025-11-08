@@ -35,5 +35,5 @@ Route::delete('/booking/{booking}', [BookingController::class, 'destroy'])->name
 Route::post('/booking',[BookingController::class,'store'])->name('booking.submit');
 Route::get('/edit/{id}', [BookingController::class, 'edit'])->name('edit');
 Route::patch('/update/{id}', [BookingController::class, 'update'])->name('update');
-Route::get('/dashboard',[dashboardController::class,'create'])->name('booking.dashboard');
+Route::get('/dashboard',[dashboardController::class,'create'])->name('dashboard');
 Route::get('/logout', Logout::class)->name('logout');
