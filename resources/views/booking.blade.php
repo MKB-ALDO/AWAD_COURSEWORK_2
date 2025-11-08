@@ -328,7 +328,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
      <script>
         document.getElementById('bookingForm').addEventListener('submit', function(e) {
-            e.preventDefault();
+            ;
             
             // Show success message
             alert('Booking confirmed successfully!');

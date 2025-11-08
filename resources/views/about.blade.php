@@ -197,7 +197,7 @@
       <a href="index">Home</a>
       <a href="about" class="active">About</a>
       <a href="book">Make Booking</a>
-      <a href="login">Login</a>
+      
     </nav>
   </header>
 
@@ -272,20 +272,20 @@
     <p class="mb-5">The passionate individuals behind Kampala Stays</p>
 
     <div class="row justify-content-center">
-      <div class="col-md-4 team-member">
-        <img src="images/team-founder.jpg" alt="David Kato - Founder">
+      <div class="col-md-4 team-member  shadow-lg">
+        
         <h4>David Kato</h4>
         <p class="text-muted">Founder & Host</p>
         <p>David started Kampala Stays with a vision to share the best of Ugandan hospitality with travelers from around the world.</p>
       </div>
-      <div class="col-md-4 team-member">
-        <img src="images/team-manager.jpg" alt="Grace Namuli - Property Manager">
+      <div class="col-md-4 team-member  shadow-lg">
+        
         <h4>Grace Namuli</h4>
         <p class="text-muted">Property Manager</p>
         <p>Grace ensures all our properties are impeccably maintained and our guests have everything they need for a perfect stay.</p>
       </div>
-      <div class="col-md-4 team-member">
-        <img src="images/team-support.jpg" alt="Michael Ssebunya - Guest Support">
+      <div class="col-md-4 team-member  shadow-lg">
+        
         <h4>Michael Ssebunya</h4>
         <p class="text-muted">Guest Support</p>
         <p>Michael is your go-to person for any questions or assistance during your stay, available 24/7 to help.</p>

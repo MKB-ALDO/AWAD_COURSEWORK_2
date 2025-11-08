@@ -39,7 +39,7 @@ class BookingController extends Controller
                    $booking->guests=$request->input('guests');
                     
         $booking->save();
-         return redirect()->route('booking.display');
+         return view('about');
     }
 
     /**
@@ -62,7 +62,7 @@ class BookingController extends Controller
     {
         $booking =Booking::find($id);
         return view('edit', compact('booking'));
-        return redirect()->route('booking.display');
+        // return redirect()->route('booking.display');
     }
 
     /**
@@ -80,7 +80,7 @@ class BookingController extends Controller
         $booking->checkOut=$request->input('checkOut');
         $booking->guests=$request->input('guests');
         $booking->save();
-        return redirect()->route('booking.display')->with('success', 'Booking updated successfully!');
+        return redirect()->route('dashboard')->with('success', 'Booking updated successfully!');
     }
 
     /**
@@ -89,6 +89,6 @@ class BookingController extends Controller
    public function destroy(Booking $booking)
 {
     $booking->delete();
-    return redirect()->route('booking.display');
+    return redirect()->route('dashboard');
 }
 }

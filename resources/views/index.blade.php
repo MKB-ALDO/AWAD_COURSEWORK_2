@@ -131,9 +131,27 @@
     <div class="logo">Kampala Stays</div>
     <nav class="d-flex">
       <a href="index">Home</a>
-      <a href="about">About</a>
+      <a href="about">About</aa>
       <a href="book">Make Booking</a>
-      <a href="login">Login</a>
+
+       @auth
+        <!-- User is logged in - Show Logout -->
+    <a href="{{ route('dashboard') }}"></i> dashboard</a>
+        
+      @else
+        <!-- User is not logged in - Show Login -->
+        
+      @endauth
+        @auth
+        <!-- User is logged in - Show Logout -->
+    <a href="{{ route('logout') }}"><i class="bi bi-box-arrow-right"></i> Logout</a>
+        
+      @else
+        <!-- User is not logged in - Show Login -->
+        <a href="{{ route('login') }}">Login</a>
+      @endauth
+       
+       
     </nav>
   </header>
 
