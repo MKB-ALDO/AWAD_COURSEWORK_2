@@ -15,4 +15,9 @@ class IndexController extends Controller
     {
         return view('booking');
     }
+     public function index()
+    {
+        return view('index');
+    }
+    
 }

@@ -185,7 +185,7 @@
         <nav>
             
             <a href="index">Home</a>
-            {{-- <a href="about">About</a> --}}
+             <a href="about">About</a> 
              <a href="book">Make Booking</a>
         </nav>
     </header>
@@ -350,7 +350,7 @@
 
     <footer class="text-center">
         <div class="container">
-            <p class="text-muted mb-0">&copy; 2024 Airbnb Clone. For demonstration purposes only.</p>
+            <p class="text-muted mb-0">&copy; 2024 Airbnb. For demonstration purposes only.</p>
         </div>
     </footer>
 

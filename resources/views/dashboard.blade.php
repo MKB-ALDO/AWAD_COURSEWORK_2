@@ -163,7 +163,7 @@
     <a href="{{ route('booking.display') }}"><i class="bi bi-table"></i> Display Bookings</a>
     <a href="#"><i class="bi bi-bar-chart"></i> Reports</a>
     <a href="#"><i class="bi bi-gear"></i> Settings</a>
-    <a href="#"><i class="bi bi-box-arrow-right"></i> Logout</a>
+    <a href="{{ route('logout') }}"><i class="bi bi-box-arrow-right"></i> Logout</a>
   </div>
 
   <!-- Main content -->

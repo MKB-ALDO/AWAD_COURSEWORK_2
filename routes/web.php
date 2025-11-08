@@ -1,5 +1,7 @@
 <?php
 
+use App\Livewire\Actions\Logout;
+
 use App\Http\Controllers\dashboardController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\BookingController;
@@ -20,6 +22,7 @@ Route::view('profile', 'profile')
     ->name('profile');
 
 require __DIR__.'/auth.php';
+Route::get('/index',[IndexController::class,'index']);
 Route::get('/book',[BookingController::class,'book']);
 Route::get('/about',[BookingController::class,'about']);
 Route::get('/book',[AboutController::class,'book']);
@@ -33,3 +36,4 @@ Route::post('/booking',[BookingController::class,'store'])->name('booking.submit
 Route::get('/edit/{id}', [BookingController::class, 'edit'])->name('edit');
 Route::patch('/update/{id}', [BookingController::class, 'update'])->name('update');
 Route::get('/dashboard',[dashboardController::class,'create'])->name('booking.dashboard');
+Route::get('/logout', Logout::class)->name('logout');

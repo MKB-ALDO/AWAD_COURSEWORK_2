@@ -238,7 +238,7 @@
             
             <a href="index">Home</a>
             <a href="about">About</a>
-             {{-- <a href="book">Make Booking</a> --}}
+             <a href="book">Make Booking</a> 
         </nav>
     </header>
     <section class="hero-booking">
