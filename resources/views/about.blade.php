@@ -216,7 +216,7 @@
       <div class="row align-items-center">
         <div class="col-md-6 mb-4 mb-md-0">
           <div class="story-image">
-            <img src="images/kampala-host.jpg" alt="Our Founder">
+            <img src="pics/apt1.jpg" alt="Our Founder">
           </div>
         </div>
         <div class="col-md-6">
